@@ -88,7 +88,7 @@ def test_create_user_no_first_name_get_error_response():
     # Удаление параметра firstName из запроса
     user_body.pop("firstName")
     # Проверка полученного ответа
-    negative_assert_no_firstname(user_body)
+    negative_assert_no_first_name(user_body)
 
 # Тест 11. Ошибка
 # Параметр fisrtName состоит из пустой строки
@@ -96,7 +96,7 @@ def test_create_user_empty_first_name_get_error_response():
     # В переменную user_body сохраняется обновлённое тело запроса
     user_body = get_user_body("")
     # Проверка полученного ответа
-    negative_assert_no_firstname(user_body)
+    negative_assert_no_first_name(user_body)
 
 def test_create_user_number_type_first_name_get_error_response():
     user_body = get_user_body(12)
